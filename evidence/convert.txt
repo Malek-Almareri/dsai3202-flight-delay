@@ -1,0 +1,8 @@
+{
+  "input_rows": 4078318,
+  "converted": 4078318,
+  "quarantined": 0,
+  "parquet_bytes": 103608121,
+  "parquet_sha256": "e9254d4e267d7bcf6bf95dd251eb7ca15ec4c13599900c4880e62096905cb42a",
+  "note": "format conversion only; no cleaning at this stage"
+}

@@ -1,0 +1,68 @@
+61 columns
+FlightDate	DATE
+Airline	VARCHAR
+Origin	VARCHAR
+Dest	VARCHAR
+Cancelled	BOOLEAN
+Diverted	BOOLEAN
+CRSDepTime	BIGINT
+DepTime	DOUBLE
+DepDelayMinutes	DOUBLE
+DepDelay	DOUBLE
+ArrTime	DOUBLE
+ArrDelayMinutes	DOUBLE
+AirTime	DOUBLE
+CRSElapsedTime	DOUBLE
+ActualElapsedTime	DOUBLE
+Distance	DOUBLE
+Year	BIGINT
+Quarter	BIGINT
+Month	BIGINT
+DayofMonth	BIGINT
+DayOfWeek	BIGINT
+Marketing_Airline_Network	VARCHAR
+Operated_or_Branded_Code_Share_Partners	VARCHAR
+DOT_ID_Marketing_Airline	BIGINT
+IATA_Code_Marketing_Airline	VARCHAR
+Flight_Number_Marketing_Airline	BIGINT
+Operating_Airline	VARCHAR
+DOT_ID_Operating_Airline	BIGINT
+IATA_Code_Operating_Airline	VARCHAR
+Tail_Number	VARCHAR
+Flight_Number_Operating_Airline	BIGINT
+OriginAirportID	BIGINT
+OriginAirportSeqID	BIGINT
+OriginCityMarketID	BIGINT
+OriginCityName	VARCHAR
+OriginState	VARCHAR
+OriginStateFips	BIGINT
+OriginStateName	VARCHAR
+OriginWac	BIGINT
+DestAirportID	BIGINT
+DestAirportSeqID	BIGINT
+DestCityMarketID	BIGINT
+DestCityName	VARCHAR
+DestState	VARCHAR
+DestStateFips	BIGINT
+DestStateName	VARCHAR
+DestWac	BIGINT
+DepDel15	DOUBLE
+DepartureDelayGroups	DOUBLE
+DepTimeBlk	VARCHAR
+TaxiOut	DOUBLE
+WheelsOff	DOUBLE
+WheelsOn	DOUBLE
+TaxiIn	DOUBLE
+CRSArrTime	BIGINT
+ArrDelay	DOUBLE
+ArrDel15	DOUBLE
+ArrivalDelayGroups	DOUBLE
+ArrTimeBlk	VARCHAR
+DistanceGroup	BIGINT
+DivAirportLandings	BIGINT
+data rows: 4078318
+column ArrDel15: present
+column Cancelled: present
+column Diverted: present
+column FlightDate: present
+[(0.0, 3090954), (1.0, 853962), (None, 133402)]
