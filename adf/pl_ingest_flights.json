@@ -1,0 +1,255 @@
+{
+  "activities": [
+    {
+      "additionalProperties": null,
+      "dataIntegrationUnits": null,
+      "dependsOn": [],
+      "description": null,
+      "enableSkipIncompatibleRow": null,
+      "enableStaging": false,
+      "inputs": [
+        {
+          "parameters": {
+            "fdir": {
+              "type": "Expression",
+              "value": "@pipeline().parameters.source_dir"
+            },
+            "fname": {
+              "type": "Expression",
+              "value": "@pipeline().parameters.source_file"
+            }
+          },
+          "referenceName": "ds_flights_csv",
+          "type": "DatasetReference"
+        }
+      ],
+      "linkedServiceName": null,
+      "logSettings": null,
+      "logStorageSettings": null,
+      "name": "copy_flights",
+      "onInactiveMarkAs": null,
+      "outputs": [
+        {
+          "parameters": {
+            "folder": {
+              "type": "Expression",
+              "value": "@pipeline().parameters.target_folder"
+            }
+          },
+          "referenceName": "ds_flights_parquet",
+          "type": "DatasetReference"
+        }
+      ],
+      "parallelCopies": null,
+      "policy": {
+        "additionalProperties": null,
+        "retry": 0,
+        "retryIntervalInSeconds": 30,
+        "secureInput": false,
+        "secureOutput": false,
+        "timeout": "0.12:00:00"
+      },
+      "preserve": null,
+      "preserveRules": null,
+      "redirectIncompatibleRowSettings": null,
+      "sink": {
+        "additionalProperties": null,
+        "disableMetricsCollection": null,
+        "formatSettings": {
+          "additionalProperties": null,
+          "fileNamePrefix": null,
+          "maxRowsPerFile": null,
+          "type": "ParquetWriteSettings"
+        },
+        "maxConcurrentConnections": null,
+        "sinkRetryCount": null,
+        "sinkRetryWait": null,
+        "storeSettings": {
+          "additionalProperties": null,
+          "blockSizeInMb": null,
+          "copyBehavior": null,
+          "disableMetricsCollection": null,
+          "maxConcurrentConnections": null,
+          "metadata": null,
+          "type": "AzureBlobFSWriteSettings"
+        },
+        "type": "ParquetSink",
+        "writeBatchSize": null,
+        "writeBatchTimeout": null
+      },
+      "skipErrorFile": null,
+      "source": {
+        "additionalColumns": null,
+        "additionalProperties": null,
+        "disableMetricsCollection": null,
+        "formatSettings": {
+          "additionalProperties": null,
+          "compressionProperties": null,
+          "skipLineCount": null,
+          "type": "DelimitedTextReadSettings"
+        },
+        "maxConcurrentConnections": null,
+        "sourceRetryCount": null,
+        "sourceRetryWait": null,
+        "storeSettings": {
+          "additionalProperties": null,
+          "deleteFilesAfterCompletion": null,
+          "disableMetricsCollection": null,
+          "enablePartitionDiscovery": false,
+          "fileListPath": null,
+          "maxConcurrentConnections": null,
+          "modifiedDatetimeEnd": null,
+          "modifiedDatetimeStart": null,
+          "partitionRootPath": null,
+          "recursive": true,
+          "type": "AzureBlobFSReadSettings",
+          "wildcardFileName": null,
+          "wildcardFolderPath": null
+        },
+        "type": "DelimitedTextSource"
+      },
+      "stagingSettings": null,
+      "state": null,
+      "translator": {
+        "mappings": [
+          {
+            "sink": {
+              "isNullable": true,
+              "name": "FlightDate",
+              "type": "Date"
+            },
+            "source": {
+              "name": "FlightDate",
+              "physicalType": "String",
+              "type": "Date"
+            }
+          },
+          {
+            "sink": {
+              "name": "Airline",
+              "physicalType": "UTF8",
+              "type": "String"
+            },
+            "source": {
+              "name": "Airline",
+              "physicalType": "String",
+              "type": "String"
+            }
+          },
+          {
+            "sink": {
+              "name": "Origin",
+              "physicalType": "UTF8",
+              "type": "String"
+            },
+            "source": {
+              "name": "Origin",
+              "physicalType": "String",
+              "type": "String"
+            }
+          },
+          {
+            "sink": {
+              "name": "Dest",
+              "physicalType": "UTF8",
+              "type": "String"
+            },
+            "source": {
+              "name": "Dest",
+              "physicalType": "String",
+              "type": "String"
+            }
+          },
+          {
+            "sink": {
+              "isNullable": true,
+              "name": "Cancelled",
+              "type": "Boolean"
+            },
+            "source": {
+              "name": "Cancelled",
+              "physicalType": "String",
+              "type": "Boolean"
+            }
+          },
+          {
+            "sink": {
+              "isNullable": true,
+              "name": "CRSDepTime",
+              "type": "Int64"
+            },
+            "source": {
+              "name": "CRSDepTime",
+              "physicalType": "String",
+              "type": "Int64"
+            }
+          },
+          {
+            "sink": {
+              "isNullable": true,
+              "name": "Distance",
+              "type": "Double"
+            },
+            "source": {
+              "name": "Distance",
+              "physicalType": "String",
+              "type": "Double"
+            }
+          },
+          {
+            "sink": {
+              "isNullable": true,
+              "name": "ArrDel15",
+              "type": "Double"
+            },
+            "source": {
+              "name": "ArrDel15",
+              "physicalType": "String",
+              "type": "Double"
+            }
+          }
+        ],
+        "type": "TabularTranslator",
+        "typeConversion": true,
+        "typeConversionSettings": {
+          "allowDataTruncation": true,
+          "treatBooleanAsNumber": false
+        }
+      },
+      "type": "Copy",
+      "userProperties": [],
+      "validateDataConsistency": null
+    }
+  ],
+  "additionalProperties": null,
+  "annotations": [],
+  "concurrency": null,
+  "description": null,
+  "etag": "9401ea0c-0000-5000-0000-6af71f430000",
+  "folder": null,
+  "id": "/subscriptions/0b475409-9d7c-4dff-a07b-084eff651874/resourceGroups/rg-dsai3202-malek-60303551/providers/Microsoft.DataFactory/factories/adf-dsai3202-60303551/pipelines/pl_ingest_flights",
+  "name": "pl_ingest_flights",
+  "parameters": {
+    "source_dir": {
+      "defaultValue": "flights/combined_flights_2022/v1",
+      "type": "string"
+    },
+    "source_file": {
+      "defaultValue": "Combined_Flights_2022.csv",
+      "type": "string"
+    },
+    "target_folder": {
+      "defaultValue": "flights/copy_trials/run-01",
+      "type": "string"
+    }
+  },
+  "policy": {
+    "elapsedTimeMetric": {
+      "duration": null
+    }
+  },
+  "resourceGroup": "rg-dsai3202-malek-60303551",
+  "runDimensions": null,
+  "type": "Microsoft.DataFactory/factories/pipelines",
+  "variables": null
+}

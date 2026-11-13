@@ -1,0 +1,14 @@
+Month | folder | rows in Parquet | rows in raw CSV
+1 01 1691211 563737
+2 02 1559856 519952
+3 03 1771626 590542
+4 04 1740870 580290
+5 05 1808850 602950
+6 06 1806171 602057
+7 07 1856370 618790
+total raw: 4078318 total parquet: 12234954
+ArrDel15 nulls raw/parquet: 133402 400206
+FlightDate DATE
+Cancelled BOOLEAN
+ArrDel15 DOUBLE
+FAIL: month 1: parquet 1691211 vs raw 563737; month 2: parquet 1559856 vs raw 519952; month 3: parquet 1771626 vs raw 590542; month 4: parquet 1740870 vs raw 580290; month 5: parquet 1808850 vs raw 602950; month 6: parquet 1806171 vs raw 602057; month 7: parquet 1856370 vs raw 618790; total rows differ; ArrDel15 null counts differ

@@ -1,0 +1,56 @@
+{
+  "activities": [
+    {
+      "additionalProperties": null,
+      "compute": {
+        "computeType": "General",
+        "coreCount": 8
+      },
+      "continuationSettings": null,
+      "continueOnError": null,
+      "dataFlow": null,
+      "dependsOn": [],
+      "description": null,
+      "integrationRuntime": null,
+      "linkedServiceName": null,
+      "name": "transform_flights",
+      "onInactiveMarkAs": null,
+      "policy": {
+        "additionalProperties": null,
+        "retry": 0,
+        "retryIntervalInSeconds": 30,
+        "secureInput": false,
+        "secureOutput": false,
+        "timeout": "0.12:00:00"
+      },
+      "runConcurrently": null,
+      "sourceStagingConcurrency": null,
+      "staging": {
+        "folderPath": null,
+        "linkedService": null
+      },
+      "state": null,
+      "traceLevel": "Fine",
+      "type": "ExecuteDataFlow",
+      "userProperties": []
+    }
+  ],
+  "additionalProperties": null,
+  "annotations": [],
+  "concurrency": 1,
+  "description": null,
+  "etag": "9701a886-0000-5000-0000-6af72a840000",
+  "folder": null,
+  "id": "/subscriptions/0b475409-9d7c-4dff-a07b-084eff651874/resourceGroups/rg-dsai3202-malek-60303551/providers/Microsoft.DataFactory/factories/adf-dsai3202-60303551/pipelines/pl_transform_flights",
+  "name": "pl_transform_flights",
+  "parameters": null,
+  "policy": {
+    "elapsedTimeMetric": {
+      "duration": null
+    }
+  },
+  "resourceGroup": "rg-dsai3202-malek-60303551",
+  "runDimensions": null,
+  "type": "Microsoft.DataFactory/factories/pipelines",
+  "variables": null
+}

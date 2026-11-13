@@ -1,0 +1,14 @@
+Month | folder | rows in Parquet | rows in raw CSV
+1 01 563737 563737
+2 02 519952 519952
+3 03 590542 590542
+4 04 580290 580290
+5 05 602950 602950
+6 06 602057 602057
+7 07 618790 618790
+total raw: 4078318 total parquet: 4078318
+ArrDel15 nulls raw/parquet: 133402 133402
+FlightDate DATE
+Cancelled BOOLEAN
+ArrDel15 DOUBLE
+PASS: bronze matches raw by month, nulls and types

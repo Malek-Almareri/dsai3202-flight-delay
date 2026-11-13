@@ -1,0 +1,40 @@
+{
+  "etag": "a9019648-0000-5000-0000-6af763a00000",
+  "id": "/subscriptions/0b475409-9d7c-4dff-a07b-084eff651874/resourceGroups/rg-dsai3202-malek-60303551/providers/Microsoft.DataFactory/factories/adf-dsai3202-60303551/triggers/tr_daily_flights",
+  "name": "tr_daily_flights",
+  "properties": {
+    "additionalProperties": null,
+    "annotations": [],
+    "description": null,
+    "pipelines": [
+      {
+        "parameters": {},
+        "pipelineReference": {
+          "name": null,
+          "referenceName": "pl_transform_flights",
+          "type": "PipelineReference"
+        }
+      }
+    ],
+    "recurrence": {
+      "additionalProperties": null,
+      "endTime": null,
+      "frequency": "Day",
+      "interval": 1,
+      "schedule": {
+        "additionalProperties": null,
+        "hours": null,
+        "minutes": null,
+        "monthDays": null,
+        "monthlyOccurrences": null,
+        "weekDays": null
+      },
+      "startTime": "2026-11-14T19:19:00+00:00",
+      "timeZone": "UTC"
+    },
+    "runtimeState": "Stopped",
+    "type": "ScheduleTrigger"
+  },
+  "resourceGroup": "rg-dsai3202-malek-60303551",
+  "type": "Microsoft.DataFactory/factories/triggers"
+}

@@ -1,0 +1,35 @@
+{
+  "etag": "900128e2-0000-5000-0000-6af7179b0000",
+  "id": "/subscriptions/0b475409-9d7c-4dff-a07b-084eff651874/resourceGroups/rg-dsai3202-malek-60303551/providers/Microsoft.DataFactory/factories/adf-dsai3202-60303551/datasets/ds_flights_parquet",
+  "name": "ds_flights_parquet",
+  "properties": {
+    "additionalProperties": null,
+    "annotations": [],
+    "compressionCodec": "snappy",
+    "description": null,
+    "folder": null,
+    "linkedServiceName": {
+      "parameters": null,
+      "referenceName": "ls_lake",
+      "type": "LinkedServiceReference"
+    },
+    "location": {
+      "additionalProperties": null,
+      "fileName": null,
+      "fileSystem": "processed",
+      "folderPath": "@dataset().folder",
+      "type": "AzureBlobFSLocation"
+    },
+    "parameters": {
+      "folder": {
+        "defaultValue": "flights/copy_trials/run-01",
+        "type": "string"
+      }
+    },
+    "schema": [],
+    "structure": null,
+    "type": "Parquet"
+  },
+  "resourceGroup": "rg-dsai3202-malek-60303551",
+  "type": "Microsoft.DataFactory/factories/datasets"
+}

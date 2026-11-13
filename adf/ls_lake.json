@@ -1,0 +1,28 @@
+{
+  "etag": "5901071e-0000-5000-0000-6ab4d0690000",
+  "id": "/subscriptions/0b475409-9d7c-4dff-a07b-084eff651874/resourceGroups/rg-dsai3202-malek-60303551/providers/Microsoft.DataFactory/factories/adf-dsai3202-60303551/linkedservices/ls_lake",
+  "name": "ls_lake",
+  "properties": {
+    "accountKey": null,
+    "additionalProperties": null,
+    "annotations": [],
+    "azureCloudType": null,
+    "connectVia": null,
+    "credential": null,
+    "description": null,
+    "encryptedCredential": null,
+    "parameters": null,
+    "sasToken": null,
+    "sasUri": null,
+    "servicePrincipalCredential": null,
+    "servicePrincipalCredentialType": null,
+    "servicePrincipalId": null,
+    "servicePrincipalKey": null,
+    "tenant": null,
+    "type": "AzureBlobFS",
+    "url": "https://amazonlake60303551.dfs.core.windows.net/",
+    "version": null
+  },
+  "resourceGroup": "rg-dsai3202-malek-60303551",
+  "type": "Microsoft.DataFactory/factories/linkedservices"
+}
