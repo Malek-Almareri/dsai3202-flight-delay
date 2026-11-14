@@ -1,0 +1,108 @@
+{
+  "run_id": "431312011309625",
+  "input_dir": "bronze",
+  "passed": true,
+  "failed_rules": [],
+  "warnings": [],
+  "rows_checked": 3944916,
+  "quarantined": 1,
+  "rows_after_quarantine": 3944915,
+  "gold_version_seen": 0,
+  "results": [
+    {
+      "rule": "schema",
+      "policy": "FAIL",
+      "passed": true,
+      "value": "ok",
+      "limit": "required columns and types"
+    },
+    {
+      "rule": "min_rows",
+      "policy": "FAIL",
+      "passed": true,
+      "value": 3944916,
+      "limit": 1000
+    },
+    {
+      "rule": "months_present",
+      "policy": "FAIL",
+      "passed": true,
+      "value": {
+        "missing": []
+      },
+      "limit": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "rule": "label_rate_overall",
+      "policy": "FAIL",
+      "passed": true,
+      "value": 0.2165,
+      "limit": [
+        0.1,
+        0.35
+      ]
+    },
+    {
+      "rule": "label_rate_by_month",
+      "policy": "FAIL",
+      "passed": true,
+      "value": {
+        "months_out_of_range": {}
+      },
+      "limit": [
+        0.08,
+        0.4
+      ]
+    },
+    {
+      "rule": "no_duplicates",
+      "policy": "FAIL",
+      "passed": true,
+      "value": 0,
+      "limit": 0
+    },
+    {
+      "rule": "retention",
+      "policy": "FAIL",
+      "passed": true,
+      "value": 1.0,
+      "limit": 0.99
+    },
+    {
+      "rule": "quarantine_share",
+      "policy": "FAIL",
+      "passed": true,
+      "value": 0.0,
+      "limit": 0.02
+    },
+    {
+      "rule": "bad_scheduled_elapsed",
+      "policy": "QUARANTINE",
+      "passed": true,
+      "value": 1,
+      "limit": "rows removed from gold"
+    },
+    {
+      "rule": "month_imbalance",
+      "policy": "WARN",
+      "passed": true,
+      "value": 0.818,
+      "limit": 0.7
+    },
+    {
+      "rule": "split_rate_shift",
+      "policy": "WARN",
+      "passed": true,
+      "value": 0.032,
+      "limit": 0.1
+    }
+  ]
+}

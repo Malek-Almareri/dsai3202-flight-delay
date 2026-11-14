@@ -1,0 +1,42 @@
+{
+  "run_id": "445882245804967",
+  "input_dir": "bronze_test",
+  "input_path": "abfss://processed@amazonlake60303551.dfs.core.windows.net/flights/combined_flights_2022/v1/bronze_test",
+  "started_utc": "2026-11-14T14:45:54+00:00",
+  "start_epoch": 1794667554.5193238,
+  "input_rows": 81473,
+  "excluded": {
+    "excluded_cancelled": 2413,
+    "excluded_diverted": 226
+  },
+  "invalid": {},
+  "excluded_total": 2639,
+  "invalid_total": 0,
+  "duplicate_copies": 0,
+  "accepted": 78834,
+  "retention": 1.0,
+  "balanced": true,
+  "duplicate_key": [
+    "FlightDate",
+    "Operating_Airline",
+    "Flight_Number_Operating_Airline",
+    "Origin",
+    "Dest",
+    "CRSDepTime"
+  ],
+  "accepted_path": "abfss://curated@amazonlake60303551.dfs.core.windows.net/flights/combined_flights_2022/v1/runs/445882245804967/accepted",
+  "rejects_path": "abfss://curated@amazonlake60303551.dfs.core.windows.net/flights/combined_flights_2022/v1/runs/445882245804967/rejects",
+  "rules_in_order": [
+    "missing_key",
+    "excluded_cancelled",
+    "excluded_diverted",
+    "bad_label",
+    "date_out_of_range",
+    "month_mismatch",
+    "bad_schedule_time",
+    "bad_airport",
+    "bad_distance",
+    "label_inconsistent",
+    "duplicate_key"
+  ]
+}

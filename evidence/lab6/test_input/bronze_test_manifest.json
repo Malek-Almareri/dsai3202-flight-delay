@@ -1,0 +1,40 @@
+{
+  "created_utc": "2026-11-14T13:33:34+00:00",
+  "source": "abfss://processed@amazonlake60303551.dfs.core.windows.net/flights/combined_flights_2022/v1/bronze",
+  "test_input": "abfss://processed@amazonlake60303551.dfs.core.windows.net/flights/combined_flights_2022/v1/bronze_test",
+  "sample_fraction_per_month": 0.02,
+  "seed": 42,
+  "injected_defect": "May: every completed flight set to ArrDel15=1 and 45 delay minutes",
+  "expected_failing_rule": "label_rate_by_month",
+  "rows": 81473,
+  "month_summary": {
+    "1": [
+      10560,
+      0.194
+    ],
+    "3": [
+      11663,
+      0.211
+    ],
+    "4": [
+      11227,
+      0.218
+    ],
+    "7": [
+      12125,
+      0.235
+    ],
+    "6": [
+      11672,
+      0.242
+    ],
+    "5": [
+      11715,
+      1.0
+    ],
+    "2": [
+      9872,
+      0.203
+    ]
+  }
+}

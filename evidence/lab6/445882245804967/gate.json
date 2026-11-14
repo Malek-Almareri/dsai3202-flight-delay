@@ -1,0 +1,112 @@
+{
+  "run_id": "445882245804967",
+  "input_dir": "bronze_test",
+  "passed": false,
+  "failed_rules": [
+    "label_rate_by_month"
+  ],
+  "warnings": [],
+  "rows_checked": 78834,
+  "quarantined": 0,
+  "rows_after_quarantine": 78834,
+  "gold_version_seen": 1,
+  "results": [
+    {
+      "rule": "schema",
+      "policy": "FAIL",
+      "passed": true,
+      "value": "ok",
+      "limit": "required columns and types"
+    },
+    {
+      "rule": "min_rows",
+      "policy": "FAIL",
+      "passed": true,
+      "value": 78834,
+      "limit": 1000
+    },
+    {
+      "rule": "months_present",
+      "policy": "FAIL",
+      "passed": true,
+      "value": {
+        "missing": []
+      },
+      "limit": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "rule": "label_rate_overall",
+      "policy": "FAIL",
+      "passed": true,
+      "value": 0.3343,
+      "limit": [
+        0.1,
+        0.35
+      ]
+    },
+    {
+      "rule": "label_rate_by_month",
+      "policy": "FAIL",
+      "passed": false,
+      "value": {
+        "months_out_of_range": {
+          "5": 1.0
+        }
+      },
+      "limit": [
+        0.08,
+        0.4
+      ]
+    },
+    {
+      "rule": "no_duplicates",
+      "policy": "FAIL",
+      "passed": true,
+      "value": 0,
+      "limit": 0
+    },
+    {
+      "rule": "retention",
+      "policy": "FAIL",
+      "passed": true,
+      "value": 1.0,
+      "limit": 0.99
+    },
+    {
+      "rule": "quarantine_share",
+      "policy": "FAIL",
+      "passed": true,
+      "value": 0.0,
+      "limit": 0.02
+    },
+    {
+      "rule": "bad_scheduled_elapsed",
+      "policy": "QUARANTINE",
+      "passed": true,
+      "value": 0,
+      "limit": "rows removed from gold"
+    },
+    {
+      "rule": "month_imbalance",
+      "policy": "WARN",
+      "passed": true,
+      "value": 0.814,
+      "limit": 0.7
+    },
+    {
+      "rule": "split_rate_shift",
+      "policy": "WARN",
+      "passed": true,
+      "value": 0.0355,
+      "limit": 0.1
+    }
+  ]
+}
