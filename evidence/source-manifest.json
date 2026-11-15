@@ -1,7 +1,7 @@
 {
   "dataset": "Flight Status Prediction (Combined_Flights_2022.csv)",
   "source_url": "https://www.kaggle.com/datasets/robikscube/flight-delay-dataset20182022",
-  "kaggle_version": "FILL_IN_FROM_KAGGLE_PAGE",
+  "kaggle_version": "Version 4",
   "file": "Combined_Flights_2022.csv",
   "size_bytes": 1415293445,
   "sha256": "b4cde15b526c365f81a08446a3c53bf83682b2bcf95e1d33d20368a9807824a3",
