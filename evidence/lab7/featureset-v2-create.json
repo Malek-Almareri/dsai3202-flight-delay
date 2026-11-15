@@ -1,0 +1,16 @@
+{
+  "description": "15 features known two hours before scheduled departure; history rates use only the 7 days before the flight date.",
+  "entities": [
+    "azureml:Flight:1"
+  ],
+  "name": "flight_features",
+  "specification": {
+    "path": "azureml://subscriptions/0b475409-9d7c-4dff-a07b-084eff651874/resourcegroups/rg-dsai3202-malek-60303551/workspaces/fsdsai320260303551/datastores/workspaceblobstore/paths/LocalUpload/160caf1529f089925389e07a6988adfc9cc6c7af1892f190aeba7e2d098b05ea/flight_features_spec_v2"
+  },
+  "stage": "Development",
+  "tags": {
+    "project": "dsai3202-flight-delay",
+    "status": "use-this-one"
+  },
+  "version": "2"
+}

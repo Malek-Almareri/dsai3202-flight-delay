@@ -1,5 +1,5 @@
 {
-  "built_utc": "2026-11-15T09:47:57+00:00",
+  "built_utc": "2026-11-15T10:44:54+00:00",
   "lab6_run_id": "431312011309625",
   "rows": 3944915,
   "columns": [
@@ -114,14 +114,14 @@
     "route": 10
   },
   "correlations": {
-    "origin_delay_rate_7d": 0.12752547999046102,
-    "carrier_delay_rate_7d": 0.14710928171418364,
-    "route_delay_rate_7d": 0.15443100493838782,
-    "origin_delay_rate_all": 0.1069108358284079,
-    "carrier_delay_rate_all": 0.11506318742244484,
-    "route_delay_rate_all": 0.17089822735213578,
-    "origin_sched_flights_hour": 0.0162298448107917,
-    "dep_hour": 0.15868962402088793
+    "origin_delay_rate_7d": 0.12752547999046096,
+    "carrier_delay_rate_7d": 0.14710928171418616,
+    "route_delay_rate_7d": 0.1544310049383857,
+    "origin_delay_rate_all": 0.10691083582840534,
+    "carrier_delay_rate_all": 0.11506318742244842,
+    "route_delay_rate_all": 0.17089822735213697,
+    "origin_sched_flights_hour": 0.01622984481079141,
+    "dep_hour": 0.15868962402088538
   },
   "problems": []
 }

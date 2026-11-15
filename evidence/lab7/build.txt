@@ -1,0 +1,45 @@
+features_v1 rows : 3944915  (success.json says 3944915)
+bronze rows      : 4078318  (raw CSV has 4078318)
+distinct flight_key: 3944915
+feature rows     : 3944915
+
+-- point-in-time audit: recompute each history feature the slow, obvious way for a sample of rows --
+origin_delay_rate_7d     sampled 1016 rows, mismatches 0
+carrier_delay_rate_7d    sampled 1016 rows, mismatches 0
+route_delay_rate_7d      sampled 1016 rows, mismatches 0
+
+-- empty history by month (the first days of January have no past) --
+month 1: rows   526893  empty origin 0.049  carrier 0.0267  route 0.1681
+month 2: rows   495651  empty origin 0.0164  carrier 0.0  route 0.0884
+month 3: rows   579953  empty origin 0.0149  carrier 0.0  route 0.0843
+month 4: rows   565501  empty origin 0.0157  carrier 0.0  route 0.0768
+month 5: rows   589376  empty origin 0.0162  carrier 0.0  route 0.0731
+month 6: rows   581836  empty origin 0.0157  carrier 0.0  route 0.078
+month 7: rows   605705  empty origin 0.0151  carrier 0.0  route 0.0779
+
+-- constant columns (a constant teaches a model nothing) --
+year         distinct values: 1   <-- CONSTANT
+carrier      distinct values: 21
+origin       distinct values: 375
+dest         distinct values: 375
+dep_hour     distinct values: 24
+day_of_week  distinct values: 7
+month        distinct values: 7
+distance     distinct values: 1578
+is_weekend   distinct values: 2
+
+-- correlation with the target (label = arrived 15+ minutes late) --
+origin_delay_rate_7d         0.1275
+carrier_delay_rate_7d        0.1471
+route_delay_rate_7d          0.1544
+origin_delay_rate_all        0.1069
+carrier_delay_rate_all       0.1151
+route_delay_rate_all         0.1709
+origin_sched_flights_hour    0.0162
+dep_hour                     0.1587
+
+wrote work/features_ts/features_ts.parquet 3944915 rows, 24 columns, 100.4 MB, 17s
+prediction_ts is TIMESTAMP WITH TIME ZONE
+manifest: evidence/lab7/features_ts_manifest.json
+
+FEATURES BUILT: all checks passed

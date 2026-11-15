@@ -1,0 +1,16 @@
+{
+  "description": "First list of 16 candidate features (kept as a record; contains a constant and three whole-period rates that leak).",
+  "entities": [
+    "azureml:Flight:1"
+  ],
+  "name": "flight_features",
+  "specification": {
+    "path": "azureml://subscriptions/0b475409-9d7c-4dff-a07b-084eff651874/resourcegroups/rg-dsai3202-malek-60303551/workspaces/fsdsai320260303551/datastores/workspaceblobstore/paths/LocalUpload/59629fcf906380e3d6be0bc5ffe876bb857068a95749ca3e532e34e02d1a746e/flight_features_spec_v1"
+  },
+  "stage": "Development",
+  "tags": {
+    "project": "dsai3202-flight-delay",
+    "status": "superseded-by-v2"
+  },
+  "version": "1"
+}

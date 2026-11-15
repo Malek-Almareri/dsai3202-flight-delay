@@ -1,0 +1,16 @@
+{
+  "description": "One scheduled US domestic flight, identified by flight_key (date, carrier, flight number, origin, destination, scheduled departure hour).",
+  "index_columns": [
+    {
+      "name": "flight_key",
+      "type": "string"
+    }
+  ],
+  "name": "Flight",
+  "stage": "Development",
+  "tags": {
+    "course": "dsai3202",
+    "project": "dsai3202-flight-delay"
+  },
+  "version": "1"
+}
