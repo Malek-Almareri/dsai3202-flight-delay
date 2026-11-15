@@ -76,7 +76,7 @@ python3 tools/flights.py verify                                 # re-downloads a
 
 * **Resource choice:** processed data is stored as Parquet, not CSV: 103,608,121 bytes against 1,415,293,445 (13.7 times smaller), so storage and every later read cost less. The whole Databricks job from cleaning to publication took 168.6 seconds (`success.json`).
 * **Cleanup steps:** keep trigger `tr_daily_flights` stopped, turn Data flow debug off, terminate the Databricks compute, stop (deallocate) the VM; keep the lake, factory and feature store; delete the GitHub token after submission.
-* **Contributions:** Malek Al-Mareri: everything in this repository (ingestion, ETL, quality gate, features, documents). Abdulrahman Abuhashim: Helped in organizing the project files and the required content. We had to do all the work in one azure account. 
+* **Contributions:** Malek Al-Mareri: everything in this repository (ingestion, ETL, quality gate, features, documents). 
 * **Reused code:** adapted from the course lab packages: Lab 3 `data.py` → `tools/flights.py`; Lab 4 ADF guide → `adf/`; Lab 5 `01_silver.py` → `databricks/lab5/`; Lab 6 job notebooks → `databricks/lab6/`; Lab 7 `add_event_ts.py` → `tools/build_features.py`. Changes: flight-specific cleaning rules, keys and gate thresholds, and point-in-time history features built with DuckDB.
 
 ## AI use
