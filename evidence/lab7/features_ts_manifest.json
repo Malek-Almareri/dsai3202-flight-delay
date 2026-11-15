@@ -1,0 +1,127 @@
+{
+  "built_utc": "2026-11-15T09:47:57+00:00",
+  "lab6_run_id": "431312011309625",
+  "rows": 3944915,
+  "columns": [
+    {
+      "name": "flight_key",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "prediction_ts",
+      "type": "TIMESTAMP WITH TIME ZONE"
+    },
+    {
+      "name": "carrier",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "origin",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "dest",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "route",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "dep_hour",
+      "type": "BIGINT"
+    },
+    {
+      "name": "arr_hour",
+      "type": "BIGINT"
+    },
+    {
+      "name": "day_of_week",
+      "type": "BIGINT"
+    },
+    {
+      "name": "month",
+      "type": "BIGINT"
+    },
+    {
+      "name": "year",
+      "type": "BIGINT"
+    },
+    {
+      "name": "distance",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sched_elapsed_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "is_weekend",
+      "type": "BOOLEAN"
+    },
+    {
+      "name": "origin_sched_flights_hour",
+      "type": "BIGINT"
+    },
+    {
+      "name": "origin_delay_rate_7d",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "carrier_delay_rate_7d",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "route_delay_rate_7d",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "origin_delay_rate_all",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "carrier_delay_rate_all",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "route_delay_rate_all",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "flight_date",
+      "type": "DATE"
+    },
+    {
+      "name": "data_split",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "label",
+      "type": "BIGINT"
+    }
+  ],
+  "file": "features_ts.parquet",
+  "bytes": 100352685,
+  "sha256": "10f304d896e5140bbe9b15ac24e955ee62e7854344c65c8dd39b463c4caae217",
+  "inputs": {
+    "features": "work/features_run/*.parquet",
+    "bronze": "work/bronze/*/*.parquet",
+    "expected_rows": 3944915
+  },
+  "history_window_days": 7,
+  "min_flights": {
+    "origin_carrier": 30,
+    "route": 10
+  },
+  "correlations": {
+    "origin_delay_rate_7d": 0.12752547999046102,
+    "carrier_delay_rate_7d": 0.14710928171418364,
+    "route_delay_rate_7d": 0.15443100493838782,
+    "origin_delay_rate_all": 0.1069108358284079,
+    "carrier_delay_rate_all": 0.11506318742244484,
+    "route_delay_rate_all": 0.17089822735213578,
+    "origin_sched_flights_hour": 0.0162298448107917,
+    "dep_hour": 0.15868962402088793
+  },
+  "problems": []
+}

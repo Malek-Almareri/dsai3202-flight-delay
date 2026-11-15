@@ -1,0 +1,24 @@
+spec      spec/flight_features_spec_v2/FeatureSetSpec.yaml
+source    abfss://curated@amazonlake60303551.dfs.core.windows.net/flights/combined_flights_2022/v1/features_ts/*.parquet
+resolves  1 part file(s)
+rows      3,944,915
+columns   in data: 24 | named by the spec: 17 (1 index + 1 timestamp + 15 features)
+  ok   feature   carrier                      spec=string    data=VARCHAR
+  ok   feature   origin                       spec=string    data=VARCHAR
+  ok   feature   dest                         spec=string    data=VARCHAR
+  ok   feature   route                        spec=string    data=VARCHAR
+  ok   feature   dep_hour                     spec=long      data=BIGINT
+  ok   feature   arr_hour                     spec=long      data=BIGINT
+  ok   feature   day_of_week                  spec=long      data=BIGINT
+  ok   feature   month                        spec=long      data=BIGINT
+  ok   feature   distance                     spec=double    data=DOUBLE
+  ok   feature   sched_elapsed_min            spec=double    data=DOUBLE
+  ok   feature   is_weekend                   spec=boolean   data=BOOLEAN
+  ok   feature   origin_sched_flights_hour    spec=long      data=BIGINT
+  ok   feature   origin_delay_rate_7d         spec=double    data=DOUBLE
+  ok   feature   carrier_delay_rate_7d        spec=double    data=DOUBLE
+  ok   feature   route_delay_rate_7d          spec=double    data=DOUBLE
+  ok   index     flight_key                   spec=string    data=VARCHAR
+  ok   timestamp prediction_ts                spec=datetime  data=TIMESTAMP WITH TIME ZONE
+
+SPEC RESOLVES TO REAL ROWS
