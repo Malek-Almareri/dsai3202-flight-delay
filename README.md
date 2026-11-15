@@ -12,7 +12,7 @@ Malek Al-Mareri (60303551), Group 3 · Submitted commit: tag `phase1-submission`
 
 ## Dataset and architecture
 
-* **Source:** Kaggle, [`Combined_Flights_2022.csv`]([https://www.kaggle.com/datasets/robikscube/flight-delay-dataset20182022](https://www.kaggle.com/datasets/robikscube/flight-delay-dataset-20182022?select=Combined_Flights_2022.csv)) (version and download details in `evidence/source-manifest.json`). 1,415,293,445 bytes (1.42 GB), 61 columns, 4,078,318 rows, January to July 2022. Not a course-lab dataset. The full file is ingested and profiled; no sample is used.
+* **Source:** Kaggle, [`Combined_Flights_2022.csv`]([https://www.kaggle.com/datasets/robikscube/flight-delay-dataset-20182022?select=Combined_Flights_2022.csv]) (version and download details in `evidence/source-manifest.json`). 1,415,293,445 bytes (1.42 GB), 61 columns, 4,078,318 rows, January to July 2022. Not a course-lab dataset. The full file is ingested and profiled; no sample is used.
 * **Ingestion:** batch, manual, one static snapshot. A new snapshot would go to `v2/` with its own manifest. Raw is never overwritten (`--overwrite=false`). SHA-256 `b4cde15b…7824a3` identifies the file. The lake copy of `_manifest.json` was uploaded before the Kaggle version was added and is never overwritten; the repository copy is the complete one, with the same hash and size. The lake copy of _manifest.json was uploaded before the Kaggle version was added and is never overwritten; the repository copy is the complete one, with the same hash and size.
 * **Schema, keys, assumptions and lineage:** [CATALOG.md](CATALOG.md) and [COLUMNS.md](COLUMNS.md). Tables are registered in Unity Catalog (`dsai3202_databricks.s_60303551.gold_flights`).
 
