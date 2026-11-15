@@ -1,0 +1,11 @@
+$schema: https://azuremlschemas.azureedge.net/latest/featureSet.schema.json
+name: flight_features
+version: "1"
+description: First list of 16 candidate features (kept as a record; contains a constant and three whole-period rates that leak).
+entities:
+  - azureml:Flight:1
+specification:
+  path: ./flight_features_spec_v1
+tags:
+  project: dsai3202-flight-delay
+  status: superseded-by-v2

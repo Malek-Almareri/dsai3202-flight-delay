@@ -1,0 +1,11 @@
+$schema: https://azuremlschemas.azureedge.net/latest/featureStoreEntity.schema.json
+# One scheduled flight. flight_key = flight date | carrier | flight number | origin | dest | scheduled departure hour.
+name: Flight
+version: "1"
+description: One scheduled US domestic flight, identified by flight_key (date, carrier, flight number, origin, destination, scheduled departure hour).
+index_columns:
+  - name: flight_key
+    type: string
+tags:
+  project: dsai3202-flight-delay
+  course: dsai3202

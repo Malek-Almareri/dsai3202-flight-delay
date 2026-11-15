@@ -1,0 +1,17 @@
+Name
+-------------------------
+carrier
+origin
+dest
+route
+dep_hour
+arr_hour
+day_of_week
+month
+distance
+sched_elapsed_min
+is_weekend
+origin_sched_flights_hour
+origin_delay_rate_7d
+carrier_delay_rate_7d
+route_delay_rate_7d

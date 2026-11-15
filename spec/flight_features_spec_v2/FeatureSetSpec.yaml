@@ -1,0 +1,44 @@
+$schema: http://azureml/sdk-2-0/FeatureSetSpec.json
+# Version 2 = what Lab 8 trains on. Every feature is known two hours before scheduled departure.
+# History rates use only flights from the 7 days BEFORE the flight date.
+source:
+  type: parquet
+  path: abfss://curated@amazonlake60303551.dfs.core.windows.net/flights/combined_flights_2022/v1/features_ts/*.parquet
+  timestamp_column:
+    name: prediction_ts
+features:
+  - name: carrier
+    type: string
+  - name: origin
+    type: string
+  - name: dest
+    type: string
+  - name: route
+    type: string
+  - name: dep_hour
+    type: long
+  - name: arr_hour
+    type: long
+  - name: day_of_week
+    type: long
+  - name: month
+    type: long
+  - name: distance
+    type: double
+  - name: sched_elapsed_min
+    type: double
+  - name: is_weekend
+    type: boolean
+  - name: origin_sched_flights_hour
+    type: long
+  - name: origin_delay_rate_7d
+    type: double
+  - name: carrier_delay_rate_7d
+    type: double
+  - name: route_delay_rate_7d
+    type: double
+index_columns:
+  - name: flight_key
+    type: string
+source_lookback:
+  days: 7300

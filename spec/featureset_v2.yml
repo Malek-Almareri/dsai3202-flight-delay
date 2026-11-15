@@ -1,0 +1,11 @@
+$schema: https://azuremlschemas.azureedge.net/latest/featureSet.schema.json
+name: flight_features
+version: "2"
+description: 15 features known two hours before scheduled departure; history rates use only the 7 days before the flight date.
+entities:
+  - azureml:Flight:1
+specification:
+  path: ./flight_features_spec_v2
+tags:
+  project: dsai3202-flight-delay
+  status: use-this-one
